@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book-Archive</title>
+    <!-------------------- 
+        BOOTSTRAP
+    ------------------ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!--------------- 
+           CSS
+    ---------------->
+    <style>
+        #loader {
+            display: none;
+        }
+
+        body {
+            background-color: rgba(241, 236, 211, 0.884);
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <section class="container">
+            <!--------------- 
+                SEARCH BOX 
+            ----------------->
+            <div class="w-75 mx-auto mt-5">
+                <div class="input-group mb-3">
+                    <input id="search_input" type="text" class="form-control" placeholder="Search Books"
+                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button onclick="loadResults()" class="btn btn-outline-dark" type="button"
+                        id="button-addon2">Search</button>
+                </div>
+            </div>
+
+            <!----------------- 
+                COUNT RESULT    
+            ------------------->
+            <p id="results_count" class="text-center"></p>
+            <hr>
+            <span id="top_results" class="mt-0"></span>
+
+            <!------------------ 
+                SEARCH RESULT  
+            ------------------->
+            <div id="results" class="row row-cols-1 row-cols-md-4 g-4 mb-5"></div>
+
+            <!----------------- 
+                LOADER 
+            ------------------>
+            <div id="loader" class="text-center  m-5">
+                <img class="w-25 h-25" src="image/loader.png" alt="">
+            </div>
+
+            <!-------------------- 
+                JAVSSCRIPT 
+            --------------------->
+            <script src="js/app.js"></script>
+
+        </section>
+    </main>
+</body>
+
+</html>
